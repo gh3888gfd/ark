@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="system">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdulla Rabee | The Experience Blog</title>
-    <!-- Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Fonts: Serif for Headings, Sans for Body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 1. Reading Progress Bar -->
-    <div class="progress-container"><div class="progress-bar" id="readingProgress"></div></div>
-
-    <!-- 2. Custom Cursor -->
+    <!-- Custom Cursor Follower -->
     <div class="cursor-follower"></div>
 
-    <!-- 3. Sticky Glass Header -->
-    <header class="main-header">
-        <nav class="nav-pill">
-            <div class="logo">A<span>R</span></div>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="readingProgress"></div>
+    </div>
+
+    <!-- Glass Header & Navigation -->
+    <header class="glass-header">
+        <nav class="nav-container">
+            <div class="logo">AR<span>.</span></div>
             <ul class="nav-links">
-                <li class="magnetic">Home</li>
-                <li class="magnetic">Experience</li>
-                <li class="magnetic">Archive</li>
+                <li class="magnetic-item"><a href="#work">Experience</a></li>
+                <li class="magnetic-item"><a href="#blog">Journal</a></li>
+                <li class="magnetic-item contact-btn"><a href="#newsletter">Let's Talk</a></li>
             </ul>
-            <button id="theme-toggle" class="neumorphic-btn">
-                <div class="sun-moon"></div>
-            </button>
-            <div class="hamburger">
-                <svg viewBox="0 0 100 100" width="40"><path class="line top" d="m 30,33 h 40" /><path class="line bottom" d="m 30,67 h 40" /></svg>
-            </div>
         </nav>
     </header>
 
-    <main>
-        <!-- 4. Hero Section (Parallax + Staggered Entrance) -->
-        <section class="hero">
-            <h1 class="reveal-text">Designing Digital <span>Experiences</span></h1>
-            <p class="stagger-load">A journey through motion, code, and aesthetics.</p>
+    <main class="smooth-scroll-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="reveal-text">Curated <span class="ghost-text">Experiences</span></h1>
+            <p class="stagger-in">A modular journey through design, code, and philosophy.</p>
         </section>
 
-        <!-- 5. Bento Box Grid -->
-        <section class="bento-grid">
-            <article class="bento-item featured hover-scale" data-tilt>
-                <div class="glass-card">
-                    <span class="tag">Featured</span>
-                    <h2>The Future of GSAP 4.0</h2>
-                    <div class="read-time">5 min read</div>
+        <!-- Bento Box Grid -->
+        <section class="bento-container" id="work">
+            <div class="bento-grid">
+                <div class="bento-item tall tilt-card" data-speed="0.1">
+                    <span class="badge">Featured</span>
+                    <div class="bento-content">
+                        <h2>The Future of Web3</h2>
+                        <p>5 min read</p>
+                    </div>
                 </div>
-            </article>
-            <article class="bento-item tall hover-scale">
-                <div class="glass-card">
-                    <span class="tag">Tech</span>
-                    <h2>Architecture of Speed</h2>
+                <div class="bento-item wide tilt-card">
+                    <h2>Experience Timeline</h2>
+                    <div id="mini-timeline"></div>
                 </div>
-            </article>
-            <!-- More items here -->
+                <div class="bento-item tilt-card">
+                    <div class="heart-pop-area">
+                        <span>Tap to Like</span>
+                        <div id="like-count">124</div>
+                    </div>
+                </div>
+                <div class="bento-item tilt-card">
+                    <h2>Newsletter</h2>
+                    <p>No spam, just value.</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- 6. Floating Socials -->
-    <aside class="social-sidebar">
-        <a href="#" class="social-icon">Li</a>
-        <a href="#" class="social-icon">Tw</a>
-        <a href="#" class="social-icon">Gh</a>
-    </aside>
-
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
 </body>
     </html>
