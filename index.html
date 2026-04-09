@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulla Rabee | The Experience Blog</title>
+    <!-- Fonts: Serif/Sans Mix -->
+    <link rel="stylesheet" href="https://use.typekit.net/xyz.css"> 
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- [FEATURE 10] Custom Cursor Follower -->
+    <div class="cursor-follower"></div>
+
+    <!-- [FEATURE 3] Reading Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="readingBar"></div>
+    </div>
+
+    <!-- [FEATURE 1 & 61] Sticky Glassmorphism Floating Nav -->
+    <header class="glass-nav">
+        <nav>
+            <div class="logo">
+                <span class="letter">A</span><span class="letter">R</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="magnetic">Experience</a>
+                <a href="#" class="magnetic">Insights</a>
+                <button id="theme-toggle" class="magnetic">
+                    <span class="mode-icon"></span>
+                </button>
+            </div>
+            <!-- [FEATURE 4] Hamburger Morph -->
+            <div class="menu-trigger">
+                <svg viewBox="0 0 100 80" width="30" height="30">
+                    <rect width="100" height="10" rx="5"></rect>
+                    <rect y="30" width="100" height="10" rx="5"></rect>
+                    <rect y="60" width="100" height="10" rx="5"></rect>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- [FEATURE 46] Oversized Hero -->
+        <section class="hero">
+            <h1 class="reveal-text">Designing <span class="gradient-text">Experiences</span> Beyond Screens.</h1>
+            <div class="parallax-img-wrap">
+                <img src="hero-bg.jpg" alt="Hero" class="parallax-img">
+            </div>
+        </section>
+
+        <!-- [FEATURE 41] Bento Box Grid -->
+        <section class="bento-grid">
+            <div class="bento-item tall reveal-up">
+                <span class="tag">Featured</span>
+                <h3>The Future of Motion UI</h3>
+                <div class="shimmer"></div>
+            </div>
+            <div class="bento-item wide reveal-up">
+                <h3>GSAP Engine Features</h3>
+            </div>
+            <div class="bento-item small reveal-up">
+                <div class="live-clock">00:00:00</div>
+            </div>
+            <div class="bento-item medium reveal-up">
+                <div class="weather-widget">24°C / Dubai</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- [FEATURE 76] Massive Fat Footer -->
+    <footer class="fat-footer">
+        <div class="footer-reveal-content">
+            <h2>Let's build the future.</h2>
+            <div class="social-links">
+                <a href="#" class="social-fill">LinkedIn</a>
+                <a href="#" class="social-fill">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
