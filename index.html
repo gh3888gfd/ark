@@ -1,72 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulla Rabee | The Experience Blog</title>
-    <!-- Fonts: Serif for Headings, Sans for Body -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Abdullah Rabee | Professional Personal Brand & Blog</title>
+    <meta name="description" content="Official website of Abdullah Rabee. Exploring experiences through a premium digital lens.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Custom Cursor Follower -->
-    <div class="cursor-follower"></div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="progress-container">
-        <div class="progress-bar" id="readingProgress"></div>
+    <!-- Skeleton Loader -->
+    <div id="loader" class="skeleton-loader">
+        <div class="skeleton-rect"></div>
     </div>
 
-    <!-- Glass Header & Navigation -->
-    <header class="glass-header">
-        <nav class="nav-container">
-            <div class="logo">AR<span>.</span></div>
-            <ul class="nav-links">
-                <li class="magnetic-item"><a href="#work">Experience</a></li>
-                <li class="magnetic-item"><a href="#blog">Journal</a></li>
-                <li class="magnetic-item contact-btn"><a href="#newsletter">Let's Talk</a></li>
-            </ul>
-        </nav>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Header & Navigation -->
+    <header class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Abdullah<span>Rabee</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><button id="theme-toggle" aria-label="Toggle Theme"><i data-lucide="moon"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="reading-progress"></div>
+        </div>
     </header>
 
-    <main class="smooth-scroll-wrapper">
+    <main>
         <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 class="reveal-text">Curated <span class="ghost-text">Experiences</span></h1>
-            <p class="stagger-in">A modular journey through design, code, and philosophy.</p>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="reveal-text">Designing <br> Future <span>Experiences</span></h1>
+                <p class="reveal-subtext">Abdullah Rabee — A premium narrative of growth and digital craftsmanship.</p>
+                <div id="lottie-hero"></div>
+            </div>
+            <div class="parallax-bg"></div>
         </section>
 
-        <!-- Bento Box Grid -->
-        <section class="bento-container" id="work">
-            <div class="bento-grid">
-                <div class="bento-item tall tilt-card" data-speed="0.1">
-                    <span class="badge">Featured</span>
-                    <div class="bento-content">
-                        <h2>The Future of Web3</h2>
-                        <p>5 min read</p>
-                    </div>
+        <!-- Blog Section -->
+        <section class="blog-section" id="blog">
+            <div class="section-header">
+                <h2>Living Blog</h2>
+                <div class="search-container">
+                    <input type="text" id="blog-search" placeholder="Search experiences...">
+                    <ul id="search-suggestions" class="glass-card hidden"></ul>
                 </div>
-                <div class="bento-item wide tilt-card">
-                    <h2>Experience Timeline</h2>
-                    <div id="mini-timeline"></div>
-                </div>
-                <div class="bento-item tilt-card">
-                    <div class="heart-pop-area">
-                        <span>Tap to Like</span>
-                        <div id="like-count">124</div>
-                    </div>
-                </div>
-                <div class="bento-item tilt-card">
-                    <h2>Newsletter</h2>
-                    <p>No spam, just value.</p>
-                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="tech">Tech</button>
+                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <div class="blog-grid" id="blog-grid">
+                <!-- Posts injected by JS -->
             </div>
         </section>
     </main>
 
-    <!-- Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="main.js"></script>
+    <!-- Footer & Newsletter -->
+    <footer>
+        <div class="newsletter-box glass-card">
+            <h3>Join the Journey</h3>
+            <p>Get exclusive insights delivered to your inbox.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="email@example.com" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Abdullah Rabee. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i data-lucide="linkedin"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <button id="copy-link" title="Copy Website Link"><i data-lucide="share-2"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="hidden"><i data-lucide="arrow-up"></i></button>
+
+    <script src="script.js"></script>
 </body>
-    </html>
+</html>
